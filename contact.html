@@ -224,11 +224,14 @@
               };
 
               try {
-                const res = await fetch("http://localhost:3000/contact", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify(data),
-                });
+                const res = await fetch(
+                  "https://e5b32810834e.ngrok-free.app/contact",
+                  {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                  }
+                );
 
                 const result = await res.json();
                 alert(result.message || "Message sent successfully!");
